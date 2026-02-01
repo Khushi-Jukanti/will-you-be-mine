@@ -3,121 +3,91 @@ const CuteCat = () => {
     <div className="relative animate-float">
       {/* Cat face */}
       <svg
-        width="120"
-        height="100"
-        viewBox="0 0 120 100"
+        width="140"
+        height="110"
+        viewBox="0 0 140 110"
         className="drop-shadow-lg"
       >
         {/* Left ear */}
         <polygon
-          points="25,35 10,5 40,25"
-          className="fill-[hsl(30,70%,70%)]"
+          points="25,45 15,15 45,35"
+          fill="#E8A87C"
         />
         {/* Right ear */}
         <polygon
-          points="95,35 110,5 80,25"
-          className="fill-[hsl(30,70%,70%)]"
+          points="115,45 125,15 95,35"
+          fill="#E8A87C"
         />
-        {/* Inner left ear */}
-        <polygon
-          points="27,32 18,12 38,27"
-          className="fill-[hsl(30,50%,80%)]"
-        />
-        {/* Inner right ear */}
-        <polygon
-          points="93,32 102,12 82,27"
-          className="fill-[hsl(30,50%,80%)]"
-        />
-        {/* Head */}
+        {/* Head - rounder oval shape */}
         <ellipse
-          cx="60"
+          cx="70"
+          cy="60"
+          rx="55"
+          ry="48"
+          fill="#E8A87C"
+        />
+        {/* Left eye - simple dots */}
+        <ellipse
+          cx="50"
           cy="55"
-          rx="50"
-          ry="45"
-          className="fill-[hsl(30,70%,75%)]"
-        />
-        {/* Left eye */}
-        <ellipse
-          cx="40"
-          cy="50"
-          rx="6"
-          ry="8"
+          rx="4"
+          ry="5"
           className="fill-foreground"
         />
-        {/* Right eye */}
+        {/* Right eye - simple dots */}
         <ellipse
-          cx="80"
-          cy="50"
-          rx="6"
-          ry="8"
+          cx="90"
+          cy="55"
+          rx="4"
+          ry="5"
           className="fill-foreground"
         />
-        {/* Eye shine left */}
+        {/* Nose - small pink oval */}
         <ellipse
-          cx="42"
-          cy="47"
-          rx="2"
-          ry="2.5"
-          className="fill-background"
+          cx="70"
+          cy="70"
+          rx="6"
+          ry="5"
+          fill="#E85A7B"
         />
-        {/* Eye shine right */}
-        <ellipse
-          cx="82"
-          cy="47"
-          rx="2"
-          ry="2.5"
-          className="fill-background"
-        />
-        {/* Nose */}
-        <ellipse
-          cx="60"
-          cy="65"
-          rx="5"
-          ry="4"
-          className="fill-primary"
-        />
-        {/* Mouth left */}
+        {/* Mouth left curve */}
         <path
-          d="M 55 72 Q 50 78 45 75"
-          stroke="hsl(var(--foreground))"
+          d="M 64 76 Q 58 82 52 78"
+          stroke="#444"
           strokeWidth="2"
           fill="none"
           strokeLinecap="round"
         />
-        {/* Mouth right */}
+        {/* Mouth right curve */}
         <path
-          d="M 65 72 Q 70 78 75 75"
-          stroke="hsl(var(--foreground))"
+          d="M 76 76 Q 82 82 88 78"
+          stroke="#444"
           strokeWidth="2"
           fill="none"
           strokeLinecap="round"
         />
-        {/* Whiskers left */}
-        <line x1="10" y1="58" x2="35" y2="62" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-        <line x1="12" y1="68" x2="35" y2="68" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-        {/* Whiskers right */}
-        <line x1="110" y1="58" x2="85" y2="62" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
-        <line x1="108" y1="68" x2="85" y2="68" stroke="hsl(var(--foreground))" strokeWidth="1.5" />
         {/* Blush left */}
         <ellipse
-          cx="30"
-          cy="65"
-          rx="8"
-          ry="5"
-          className="fill-primary/30"
+          cx="35"
+          cy="70"
+          rx="10"
+          ry="6"
+          fill="#F5A9B8"
+          opacity="0.5"
         />
         {/* Blush right */}
         <ellipse
-          cx="90"
-          cy="65"
-          rx="8"
-          ry="5"
-          className="fill-primary/30"
+          cx="105"
+          cy="70"
+          rx="10"
+          ry="6"
+          fill="#F5A9B8"
+          opacity="0.5"
         />
       </svg>
-      {/* Heart decoration */}
-      <div className="absolute -top-2 -right-2 text-2xl animate-pulse-heart">
-        💕
+      {/* Heart decoration - positioned like reference */}
+      <div className="absolute top-0 -right-1 text-3xl animate-pulse-heart">
+        💗
       </div>
     </div>
   );
