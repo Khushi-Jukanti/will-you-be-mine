@@ -64,7 +64,7 @@ const LoveCard = ({ isOpen }: LoveCardProps) => {
         {/* GIF */}
         <div className="rounded-2xl overflow-hidden mb-6 bg-accent">
           <img
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnI5YnZ3bjJ0ZGR1NzR4d3A2aTF4Z2V0MWt5Y2hiY2NueTFmZWZzayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cMVgEhDeKzPwI/giphy.gif"
+            src="https://c.tenor.com/51ZT-udb8KYAAAAC/tenor.gif"
             alt="Cute love animation"
             className="w-full h-auto"
           />

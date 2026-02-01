@@ -8,26 +8,29 @@ const CuteCat = () => {
         viewBox="0 0 150 120"
         className="drop-shadow-lg"
       >
-        {/* Head with slight heart-shape curve at top */}
-        <path
-          d="M 75 15
-             Q 45 15 30 35
-             Q 10 55 15 80
-             Q 20 105 50 115
-             Q 75 120 100 115
-             Q 130 105 135 80
-             Q 140 55 120 35
-             Q 105 15 75 15"
-          fill="#E8A87C"
-        />
-        
-        {/* Small ear - starting from inside head, cute triangle */}
+        {/* Left ear */}
         <polygon
-          points="32,38 18,12 48,32"
-          fill="#E8A87C"
+          points="26,38 18,16 30,10 42,16 36,38"
+          className="fill-[hsl(30,70%,70%)]"
         />
-        
-        {/* Left eye - simple dot */}
+
+        {/* Right ear */}
+        <polygon
+          points="94,38 82,16 90,10 102,16 96,38"
+          className="fill-[hsl(30,70%,70%)]"
+        />
+
+        {/* Inner left ear */}
+        <polygon
+          points="27,32 18,12 38,27"
+          className="fill-[hsl(30,50%,80%)]"
+        />
+        {/* Inner right ear */}
+        <polygon
+          points="93,32 102,12 82,27"
+          className="fill-[hsl(30,50%,80%)]"
+        />
+        {/* Head */}
         <ellipse
           cx="52"
           cy="60"
@@ -52,24 +55,36 @@ const CuteCat = () => {
           ry="4"
           fill="#E85A7B"
         />
-        
-        {/* Mouth - cute smile curves */}
         <path
-          d="M 68 82 Q 62 88 56 84"
-          stroke="#555"
-          strokeWidth="2"
+          d="M 54 70 Q 60 74 66 70"
+          stroke="hsl(var(--foreground))"
+          strokeWidth="1.5"
           fill="none"
           strokeLinecap="round"
         />
-        <path
-          d="M 82 82 Q 88 88 94 84"
-          stroke="#555"
+        {/* Mouth left */}
+        {/* <path
+          d="M 55 72 Q 50 78 45 75"
+          stroke="hsl(var(--foreground))"
           strokeWidth="2"
           fill="none"
           strokeLinecap="round"
-        />
-        
-        {/* Blush left - soft pink */}
+        /> */}
+        {/* Mouth right */}
+        {/* <path
+          d="M 65 72 Q 70 78 75 75"
+          stroke="hsl(var(--foreground))"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+        /> */}
+        {/* Whiskers left */}
+        {/* <line x1="10" y1="58" x2="35" y2="62" stroke="hsl(var(--foreground))" strokeWidth="1.5" /> */}
+        {/* <line x1="12" y1="68" x2="35" y2="68" stroke="hsl(var(--foreground))" strokeWidth="1.5" /> */}
+        {/* Whiskers right */}
+        {/* <line x1="110" y1="58" x2="85" y2="62" stroke="hsl(var(--foreground))" strokeWidth="1.5" /> */}
+        {/* <line x1="108" y1="68" x2="85" y2="68" stroke="hsl(var(--foreground))" strokeWidth="1.5" /> */}
+        {/* Blush left */}
         <ellipse
           cx="38"
           cy="78"

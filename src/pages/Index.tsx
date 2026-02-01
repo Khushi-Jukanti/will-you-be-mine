@@ -17,7 +17,7 @@ const Index = () => {
       <FloatingHearts />
 
       {/* Main card */}
-      <div 
+      <div
         className="valentine-card rounded-3xl p-8 md:p-12 max-w-lg w-full relative z-10 text-center animate-fade-in-up"
         style={{ animationDelay: '0.2s' }}
       >
@@ -27,9 +27,10 @@ const Index = () => {
         </div>
 
         {/* Main question */}
-        <h1 className="font-romantic text-3xl sm:text-4xl md:text-5xl text-foreground mb-10 leading-relaxed">
-          Ishu, will you be my Valentine?
+        <h1 className="font-romantic whitespace-nowrap text-[1rem] sm:text-[1.4rem] md:text-[1.6rem] text-foreground mb-10 leading-tight">
+          Hrithika, will you be my Valentine?
         </h1>
+
 
         {/* Buttons container */}
         <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
@@ -46,7 +47,7 @@ const Index = () => {
         </div>
 
         {/* Playful text */}
-        <p className="text-muted-foreground text-base md:text-lg animate-bounce-subtle font-medium">
+        <p className="text-muted-foreground text-base md:text-[0.8rem] animate-bounce-subtle font-medium">
           "No" seems a bit shy… 🙈
         </p>
       </div>
