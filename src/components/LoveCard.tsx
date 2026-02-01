@@ -72,7 +72,7 @@ const LoveCard = ({ isOpen }: LoveCardProps) => {
 
         {/* Additional message */}
         <p className="text-muted-foreground text-lg font-medium">
-          You make every day special 💖
+          Every day feels better with you in it 💖
         </p>
 
         {/* Floating mini hearts */}
