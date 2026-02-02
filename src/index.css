@@ -215,3 +215,32 @@
 .animate-sparkle {
   animation: sparkle 1.5s ease-in-out infinite;
 }
+
+@keyframes love-float-zigzag {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(75vh) translateX(20px);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-20px);
+  }
+  75% {
+    transform: translateY(25vh) translateX(15px);
+  }
+  100% {
+    transform: translateY(-20vh) translateX(0);
+    opacity: 0;
+  }
+}
+
+.animate-love-zigzag {
+  animation-name: love-float-zigzag;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

@@ -37,9 +37,27 @@ const LoveCard = ({ isOpen }: LoveCardProps) => {
           ✨
         </div>
       ))}
+      {/* Floating love symbols (NEW – does not replace sparkles) */}
+      {Array.from({ length: 10 }).map((_, i) => {
+        const loves = ['💖', '💕', '💗', '💘', '💝'];
+        return (
+          <div
+            key={`love-${i}`}
+            className="absolute text-2xl md:text-3xl animate-love-zigzag pointer-events-none opacity-70"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${10 + Math.random() * 6}s`,
+              animationDelay: `${Math.random() * 6}s`,
+            }}
+          >
+            {loves[i % loves.length]}
+          </div>
+        );
+      })}
+
 
       {/* Card */}
-      <div 
+      <div
         className="valentine-card rounded-3xl p-8 md:p-12 max-w-md w-full mx-4 text-center relative overflow-hidden"
         style={{
           animation: 'fade-in-up 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
@@ -58,7 +76,7 @@ const LoveCard = ({ isOpen }: LoveCardProps) => {
 
         {/* Message */}
         <h2 className="font-romantic text-3xl md:text-4xl text-primary mb-6">
-          I love you so much
+          Yay!🎉 <br /> Good Choice...
         </h2>
 
         {/* GIF */}
@@ -72,14 +90,17 @@ const LoveCard = ({ isOpen }: LoveCardProps) => {
 
         {/* Additional message */}
         <p className="text-muted-foreground text-lg font-medium">
-          Every day feels better with you in it 💖
+          Every day feels better with you in it
+        </p>
+        <p className="text-muted-foreground text-small font-medium">
+          I Love You so much💝
         </p>
 
         {/* Floating mini hearts */}
         <div className="flex justify-center gap-2 mt-4">
           {['💗', '💓', '💕', '💖', '💝'].map((heart, i) => (
-            <span 
-              key={i} 
+            <span
+              key={i}
               className="text-2xl animate-bounce-subtle"
               style={{ animationDelay: `${i * 0.15}s` }}
             >
