@@ -116,27 +116,82 @@
 // export default LoveCard;
 
 
+// import { motion } from "framer-motion";
+
+// interface LoveCardProps {
+//   message: string;
+// }
+
+// const LoveCard: React.FC<LoveCardProps> = ({ message }) => {
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0, scale: 0.85 }}
+//       animate={{ opacity: 1, scale: 1 }}
+//       transition={{ duration: 0.7, ease: "easeOut" }}
+//       className="bg-white/70 backdrop-blur-xl rounded-3xl px-10 py-12 text-center shadow-2xl max-w-md z-10"
+//     >
+//       <p className="text-lg md:text-xl font-medium text-rose-600 leading-relaxed">
+//         {message}
+//       </p>
+
+//       <p className="mt-6 text-xs text-muted-foreground">
+//         rose day, but make it intentional
+//       </p>
+//     </motion.div>
+//   );
+// };
+
+// export default LoveCard;
+
+
 import { motion } from "framer-motion";
 
-interface LoveCardProps {
-  message: string;
-}
-
-const LoveCard: React.FC<LoveCardProps> = ({ message }) => {
+const LoveCard: React.FC = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.85 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      className="bg-white/70 backdrop-blur-xl rounded-3xl px-10 py-12 text-center shadow-2xl max-w-md z-10"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="relative bg-white/50 backdrop-blur-2xl border border-rose-100 rounded-[2.5rem] px-8 py-14 text-center shadow-xl max-w-xs mx-4 z-10"
     >
-      <p className="text-lg md:text-xl font-medium text-rose-600 leading-relaxed">
-        {message}
-      </p>
+      {/* The Rose */}
+      <motion.div
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ repeat: Infinity, duration: 3 }}
+        className="text-6xl mb-8"
+      >
+        🌹
+      </motion.div>
 
-      <p className="mt-6 text-xs text-muted-foreground">
-        rose day, but make it intentional
-      </p>
+      {/* Simple, Deep Content */}
+      <div className="space-y-6">
+        {/* <h2 className="text-rose-500 font-medium tracking-widest text-[10px] uppercase">
+          Rose Day
+        </h2> */}
+
+        <div className="space-y-2">
+          <p className="font-serif text-2xl text-slate-900 italic">
+            "Simply, you."
+          </p>
+          <p className="text-slate-500 text-sm font-light">
+            Everything else is noise.
+          </p>
+        </div>
+
+        <div className="py-2">
+          <div className="h-[1px] w-6 bg-rose-200 mx-auto"></div>
+        </div>
+
+        <p className="text-slate-800 text-base leading-relaxed">
+          I’m giving you this rose because <br />
+          <span className="font-semibold text-rose-600">you are my favorite thought.</span>
+        </p>
+      </div>
+
+      {/* Minimal Footer */}
+      {/* <p className="mt-10 text-[10px] text-slate-400 font-light tracking-tighter">
+        With love, 2026
+      </p> */}
     </motion.div>
   );
 };

@@ -82,9 +82,7 @@ const Index: React.FC = () => {
       {!roseGiven ? (
         <RoseOffer onOffer={handleRoseClick} />
       ) : (
-        <LoveCard
-          message="Not asking anything. Just giving you a rose."
-        />
+        <LoveCard/>
       )}
     </div>
   );
