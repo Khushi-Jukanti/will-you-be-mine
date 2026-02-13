@@ -61,29 +61,59 @@
 // export default Index;
 
 
+// import { useState } from "react";
+// import FloatingHearts from "@/components/FloatingHearts";
+// import RoseOffer from "@/components/RoseOffer";
+// import LoveCard from "@/components/LoveCard";
+
+// const Index: React.FC = () => {
+//   const [roseGiven, setRoseGiven] = useState<boolean>(false);
+
+//   const handleRoseClick = (): void => {
+//     setRoseGiven(true);
+//   };
+
+//   return (
+//     <div className="min-h-screen relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-rose-100 via-pink-200 to-rose-300">
+//       {/* Ambient background */}
+//       <FloatingHearts />
+
+//       {/* Main content */}
+//       {!roseGiven ? (
+//         <RoseOffer onOffer={handleRoseClick} />
+//       ) : (
+//         <LoveCard/>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Index;
+
+
+
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import FloatingHearts from "@/components/FloatingHearts";
-import RoseOffer from "@/components/RoseOffer";
-import LoveCard from "@/components/LoveCard";
+import ValentineEnvelope from "@/components/ValentineEnvelope";
+import RoyalScroll from "@/components/RoyalScroll";
 
 const Index: React.FC = () => {
-  const [roseGiven, setRoseGiven] = useState<boolean>(false);
-
-  const handleRoseClick = (): void => {
-    setRoseGiven(true);
-  };
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <div className="min-h-screen relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-rose-100 via-pink-200 to-rose-300">
-      {/* Ambient background */}
+      {/* Background Ambience */}
       <FloatingHearts />
+      {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-rose-50 via-transparent to-transparent opacity-50" /> */}
 
-      {/* Main content */}
-      {!roseGiven ? (
-        <RoseOffer onOffer={handleRoseClick} />
-      ) : (
-        <LoveCard/>
-      )}
+      <AnimatePresence mode="wait">
+        {!isOpen ? (
+          <ValentineEnvelope key="envelope" onOpen={() => setIsOpen(true)} />
+        ) : (
+          <RoyalScroll key="scroll" />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
