@@ -289,7 +289,7 @@ const RoyalScroll: React.FC = () => {
                     className="p-6 pt-10 pb-10 flex flex-col items-center text-center space-y-5"
                 >
                     <div className="text-rose-500 font-serif text-xs tracking-[0.3em] uppercase opacity-80">
-                        For My Ammuu
+                        For My XXXX
                     </div>
 
                     <div className="w-12 h-[1px] bg-rose-200" />
@@ -321,7 +321,7 @@ const RoyalScroll: React.FC = () => {
                     </div>
 
                     <div className="text-[10px] tracking-[0.4em] text-slate-300 pt-6 uppercase">
-                        Hrithika ♡ Khushi
+                        XXXX ♡ Khushi
                     </div>
                 </motion.div>
             </motion.div>
